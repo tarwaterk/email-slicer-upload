@@ -12,6 +12,7 @@ class App extends Component {
     acceptedFiles.forEach(file => {
       req.attach(file.name, file);
     });
+    console.log(req.body);
     req.end((err, res) => {
       if(err) {
         console.log("Error:", err);
